@@ -1,0 +1,128 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.vision-container {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.vision-title {
+    color: #67c1f5;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s; /* Fade-in effect for title */
+}
+
+.vision-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduced gap between image and text */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.vision-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vision-image {
+    position: relative;
+    width: 250px; /* Reduced size of the image container */
+    height: 250px; /* Reduced size of the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s forwards 1s; /* Fade-in effect for image */
+    transition: transform 0.5s, opacity 0.5s; /* Transition for hover effect */
+}
+
+.vision-image:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.spotlight {
+    position: absolute;
+    width: 100%;
+    height: 50%; /* Ensure the spotlight covers the image */
+    background: linear-gradient(95deg, transparent 50%, #67c1f5 100%);
+    clip-path: polygon(50% 0%, 100% 100%, 10% 100%);
+}
+
+.telegram-logo {
+    position: absolute;
+    width: 120px; /* Adjusted size of the logo */
+    height: 50px; /* Adjusted size of the logo */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dog-image {
+    position: absolute;
+    width: 100%; /* Adjusted size of the dog image */
+    height: 120%; /* Adjusted size of the dog image */
+    bottom: 0;
+    left: 50%;
+    background: url('../Images/Blue-Cryp.png') no-repeat center center;
+    background-size: contain;
+    transform: translateX(-50%);
+}
+
+.vision-text {
+    max-width: 500px; /* Adjusted max-width of the text container */
+    text-align: left;
+    margin-top: 10px; /* Adjusted margin-top of the text */
+    opacity: 0;
+    animation: fadeIn 1s forwards 1.5s; /* Fade-in effect for text */
+    transition: transform 0.5s, opacity 0.5s; /* Transition for hover effect */
+}
+.vision-text p{
+    text-align: justify;
+}
+
+.vision-text:hover {
+    transform: translateX(10px);
+    opacity: 0.9;
+}
+
+.reverse-order {
+    flex-direction: column-reverse; /* Reverse the order of image and text for mobile view */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .vision-content {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px; /* Slightly increased gap for larger screens */
+    }
+
+    .reverse-order {
+        flex-direction:row-reverse; /* Reverse the order of image and text for larger screens */
+    }
+
+    .vision-text {
+        text-align: left;
+    }
+}
