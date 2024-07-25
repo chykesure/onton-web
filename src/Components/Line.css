@@ -1,0 +1,37 @@
+/* Ensure the parent container has a transparent background */
+body, html {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .line-container {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #333; /* Dark line color */
+    margin: 20px 0;
+    color: transparent;
+  }
+  
+  .line-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 1rem;
+    background-color: transparent;
+    color: #474545; /* Text color */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  @media (max-width: 600px) {
+    .line-text {
+      font-size: 0.8rem;
+      padding: 0 0.5rem;
+    }
+  }
+  

@@ -1,6 +1,11 @@
+body, html {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
 .homepage {
   text-align: center;
-  background-color: #111;
+  background-color: black;
   color: #00aaff;
   padding: 20px;
 }

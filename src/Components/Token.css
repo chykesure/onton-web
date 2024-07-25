@@ -1,0 +1,64 @@
+.tokenomics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: #ffffff;
+    padding: 50px 20px;
+  }
+  
+  .tokenomics-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #58a6ff;
+  }
+  
+  .tokenomics-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .tokenomics-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+  }
+  
+  .tokenomics-item:hover {
+    transform: translateY(-10px); /* Move card up on hover */
+  }
+  
+  .tokenomics-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .tokenomics-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tokenomics-value {
+    font-size: 16px;
+    color: #58a6ff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .tokenomics-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

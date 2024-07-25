@@ -1,0 +1,152 @@
+.join-container {
+    max-width: 100%; /* Ensure the container uses full width */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .join-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    animation: slideInDown 1s ease-in-out;
+  }
+  
+  .join-header h1 {
+    font-size: 32px; /* Increased header font size */
+    margin: 0;
+  }
+  
+  .rocket-icon {
+    font-size: 32px; /* Increased icon size */
+    color: #007bff;
+  }
+  
+  .join-content p {
+    font-size: 22px; /* Increased font size */
+    margin: 20px 0 10px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-around; /* Distribute cards evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 15px; /* Reduced spacing between cards */
+  }
+  
+  .card {
+    flex: 1;
+    min-width: 240px; /* Adjusted for fitting in the viewport */
+    max-width: 280px; /* Set maximum width to prevent cards from becoming too large */
+    padding: 30px;
+    background-color: #1c1c1c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Slightly larger shadow */
+    transition: transform 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+    /* Remove clip-path for rectangle shape */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    position: relative;
+    overflow: hidden;
+    text-align: center; /* Center text in the card */
+  }
+  
+  .card:before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+  }
+  
+  .card:hover:before {
+    transform: translateY(-15%) rotate(45deg);
+  }
+  
+  .card-icon {
+    font-size: 50px; /* Adjusted icon size */
+    margin-bottom: 20px; /* Increased margin for spacing */
+    color: #007bff;
+  }
+  
+  .card h2 {
+    font-size: 24px; /* Adjusted font size */
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card p {
+    font-size: 18px; /* Adjusted font size */
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .cards {
+      flex-direction: column;
+      align-items: center; /* Center align cards vertically on smaller screens */
+    }
+  
+    .card {
+      margin-bottom: 20px;
+      min-width: 200px; /* Ensure cards are still usable on smaller screens */
+      max-width: 300px; /* Remove maximum width constraint on smaller screens */
+      padding: 20px;
+    }
+  
+    .card h2 {
+      font-size: 20px;
+    }
+  
+    .card p {
+      font-size: 16px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

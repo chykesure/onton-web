@@ -6,7 +6,7 @@
 }
 
 .vision-container {
-    background-color: #1c1c1c;
+    background-color: black;
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     padding: 20px;
@@ -92,8 +92,8 @@
     animation: fadeIn 1s forwards 1.5s; /* Fade-in effect for text */
     transition: transform 0.5s, opacity 0.5s; /* Transition for hover effect */
 }
-.vision-text p{
-    text-align: justify;
+.vision-text p {
+    text-align: start;
 }
 
 .vision-text:hover {
@@ -119,7 +119,7 @@
     }
 
     .reverse-order {
-        flex-direction:row-reverse; /* Reverse the order of image and text for larger screens */
+        flex-direction: row-reverse; /* Reverse the order of image and text for larger screens */
     }
 
     .vision-text {
